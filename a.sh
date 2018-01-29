@@ -1,1 +1,1 @@
-git push origin  https://github.com/JohnAlanCalma/COMP305_W2018.git
+git push  https://github.com/JohnAlanCalma/COMP305_W2018.git master
