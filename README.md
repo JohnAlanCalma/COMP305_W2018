@@ -1,7 +1,7 @@
 # COMP305_W2018 - Game Programming 1
 
 ---
-##Includes the following
+## Includes the following
 ### Lab 1
 
 ---
