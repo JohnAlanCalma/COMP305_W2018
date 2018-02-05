@@ -6,12 +6,7 @@ public class blue : MonoBehaviour {
 
     Vector2 originalPos = new Vector2(0.38f, 1.97f);
 
-
-
-    Vector2 shrek_originalPos;
-    Vector2 shrek_yellow_originalPos;
-    Vector2 shrek_red_originalPos;
-    Vector2 shrek_blue_originalPos;
+    public bool clicked = false;
 
     public GameObject shrek;
     public GameObject shrek_yellow;
@@ -20,16 +15,24 @@ public class blue : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        shrek.GetComponent<Rigidbody2D>().gravityScale = 0;
-        shrek_yellow.GetComponent<Rigidbody2D>().gravityScale = 0;
-        shrek_red.GetComponent<Rigidbody2D>().gravityScale = 0;
-        shrek_blue.GetComponent<Rigidbody2D>().gravityScale = 0;
+
+
+        //shrek.GetComponent<Rigidbody2D>().gravityScale = 0;
+        //shrek_yellow.GetComponent<Rigidbody2D>().gravityScale = 0;
+        //shrek_red.GetComponent<Rigidbody2D>().gravityScale = 0;
+        //shrek_blue.GetComponent<Rigidbody2D>().gravityScale = 0;
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+        //if (clicked)
+        //{
+        //    shrek.GetComponent<Rigidbody2D>().gravityScale = 10;
+        //    shrek_yellow.GetComponent<Rigidbody2D>().gravityScale = 10;
+        //    shrek_red.GetComponent<Rigidbody2D>().gravityScale = 10;
+        //    shrek_blue.GetComponent<Rigidbody2D>().gravityScale = 0;
+        //}
 	}
 
 
@@ -37,21 +40,28 @@ public class blue : MonoBehaviour {
     private void OnMouseUp()
     {
 
-        shrek.transform.position = originalPos;
-        shrek_yellow.transform.position = originalPos;
-        shrek_red.transform.position = originalPos;
-        shrek_blue.transform.position = originalPos;
-
-
-        //shrek.GetComponent<Rigidbody2D>().gravityScale = 0;
-        //shrek_yellow.GetComponent<Rigidbody2D>().gravityScale = 0;
-        //shrek_red.GetComponent<Rigidbody2D>().gravityScale = 0;
-        shrek_blue.GetComponent<Rigidbody2D>().gravityScale = 0;
-
-        shrek.GetComponent<Rigidbody2D>().gravityScale = 10;
-        shrek_yellow.GetComponent<Rigidbody2D>().gravityScale = 10;
-        shrek_red.GetComponent<Rigidbody2D>().gravityScale = 10;
+        shrek.SetActive(false);
+        shrek_yellow.SetActive(false);
+        shrek_red.SetActive(false);
+        shrek_blue.SetActive(true);
+ 
+        //clicked = true;
+        //shrek_yellow.SetActive();
         //shrek_blue.GetComponent<Rigidbody2D>().gravityScale = 0;
+        ////shrek.transform.position = originalPos;
+        ////shrek_yellow.transform.position = originalPos;
+        ////shrek_red.transform.position = originalPos;
+        //shrek_blue.transform.position = originalPos;
+
+
+        ////shrek.GetComponent<Rigidbody2D>().gravityScale = 0;
+        ////shrek_yellow.GetComponent<Rigidbody2D>().gravityScale = 0;
+        ////shrek_red.GetComponent<Rigidbody2D>().gravityScale = 0;
+
+        ////shrek.GetComponent<Rigidbody2D>().gravityScale = 10;
+        ////shrek_yellow.GetComponent<Rigidbody2D>().gravityScale = 10;
+        ////shrek_red.GetComponent<Rigidbody2D>().gravityScale = 10;
+        ////shrek_blue.GetComponent<Rigidbody2D>().gravityScale = 0;
 
     }
 }
